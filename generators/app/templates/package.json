@@ -1,0 +1,8 @@
+{
+  "name": "foxtral",
+  "devDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "license": "MIT"
+}

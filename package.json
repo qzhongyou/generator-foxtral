@@ -1,6 +1,6 @@
 {
   "name": "generator-foxtral",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "基于yeoman的foxtral脚手架",
   "homepage": "",
   "author": {
@@ -27,8 +27,10 @@
     "jest-cli": "^21.0.0"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
   "jest": {
