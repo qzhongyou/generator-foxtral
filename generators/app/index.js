@@ -5,35 +5,26 @@ const yosay = require('yosay');
 const _ = require('lodash');
 const extend = _.merge;
 const path = require('path');
-// Var mkdirp = require('mkdirp');
 
 module.exports = class extends Generator {
   constructor(args, options) {
     super(args, options);
+
     // 项目名称
     this.argument('name', { type: String, required: false });
+
     // 项目名称
     this.option('name', {
       type: String,
       required: false,
       desc: 'Project name'
     });
-    // 项目根目录
-    this.option('projectRoot', {
-      type: String,
-      required: false,
-      default: 'lib',
-      desc: 'Relative path to the project code root'
-    });
-
-    this.log(this.name);
   }
 
   // 初始化
   initializing() {
     this.props = {
-      root: this.options.projectRoot,
-      name: this.options.name || this.name
+      root: this.options.projectRoot
     };
   }
 
@@ -77,6 +68,11 @@ module.exports = class extends Generator {
         store: true
       },
       {
+        name: 'projectMain',
+        message: 'Main file (app.js):',
+        default: 'app.js'
+      },
+      {
         name: 'keywords',
         message: 'Package keywords (comma to split)',
         when: !this.props.keywords,
@@ -106,8 +102,6 @@ module.exports = class extends Generator {
 
       // 名称不同是修改目录创建文件夹
       this.destinationRoot(this.destinationPath(this.props.name));
-      // 创建目录
-      //  mkdirp(this.props.name);
     }
   }
 
@@ -124,8 +118,7 @@ module.exports = class extends Generator {
         email: this.props.authorEmail,
         url: this.props.authorUrl
       },
-      files: [this.options.projectRoot],
-      main: path.join(this.options.projectRoot, 'index.js').replace(/\\/g, '/'),
+      main: this.props.projectMain,
       keywords: this.props.keywords
     });
 
@@ -140,8 +133,7 @@ module.exports = class extends Generator {
     this.fs.write(
       this.destinationPath('README.md'),
       readmeTpl({
-        generatorName: this.props.name,
-        yoName: 'asd'
+        generatorName: this.props.name
       })
     );
 

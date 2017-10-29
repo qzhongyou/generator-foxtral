@@ -1,8 +1,22 @@
 {
   "name": "foxtral",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "玉面",
+    "email": "837300621@qq.com",
+    "url": ""
+  },
+  "files": ["app", "app.js"],
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
   "devDependencies": {},
   "dependencies": {
     "lodash": "^4.17.4"
   },
+  "keywords": [],
   "license": "MIT"
 }
