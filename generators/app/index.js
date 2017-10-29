@@ -139,10 +139,15 @@ module.exports = class extends Generator {
 
     // 创建文件目录
     this.fs.copyTpl(this.templatePath('app'), this.destinationPath('app'), this.props);
+
+    // Editorconfig
+    this.fs.copy(
+      path.join(__dirname, '../../.editorconfig'),
+      this.destinationPath('.editorconfig')
+    );
   }
 
   install() {
-    // This.npmInstall();
     this.installDependencies({ skipInstall: this.options['skip-install'], bower: false });
   }
 
