@@ -1,0 +1,152 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@4.1.2
+3 info using node@v8.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/quezhongyou/generator/generator-foxtral',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/quezhongyou/.npm correctMkdir not in flight; initializing
+10 warn prepublish-on-install As of npm@5, `prepublish` scripts will run only for `npm publish`.
+11 warn prepublish-on-install (In npm@4 and previous versions, it also runs for `npm install`.)
+12 warn prepublish-on-install See the deprecation note in `npm help scripts` for more information.
+13 info lifecycle generator-foxtral@0.0.1~prepublish: generator-foxtral@0.0.1
+14 verbose lifecycle generator-foxtral@0.0.1~prepublish: unsafe-perm in lifecycle true
+15 verbose lifecycle generator-foxtral@0.0.1~prepublish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/quezhongyou/generator/generator-foxtral/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+16 verbose lifecycle generator-foxtral@0.0.1~prepublish: CWD: /Users/quezhongyou/generator/generator-foxtral
+17 silly lifecycle generator-foxtral@0.0.1~prepublish: Args: [ '-c', 'nsp check' ]
+18 silly lifecycle generator-foxtral@0.0.1~prepublish: Returned: code: 0  signal: null
+19 info lifecycle generator-foxtral@0.0.1~prepare: generator-foxtral@0.0.1
+20 silly lifecycle generator-foxtral@0.0.1~prepare: no script for prepare, continuing
+21 verbose tar pack [ '/Users/quezhongyou/.npm/generator-foxtral/0.0.1/package.tgz',
+21 verbose tar pack   '/Users/quezhongyou/generator/generator-foxtral' ]
+22 verbose tarball /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package.tgz
+23 verbose folder /Users/quezhongyou/generator/generator-foxtral
+24 verbose addLocalTarball adding from inside cache /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package.tgz
+25 verbose correctMkdir /Users/quezhongyou/.npm correctMkdir not in flight; initializing
+26 silly cache afterAdd generator-foxtral@0.0.1
+27 verbose afterAdd /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package/package.json not in flight; writing
+28 verbose correctMkdir /Users/quezhongyou/.npm correctMkdir not in flight; initializing
+29 verbose afterAdd /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package/package.json written
+30 silly publish { name: 'generator-foxtral',
+30 silly publish   version: '0.0.1',
+30 silly publish   description: '基于yeoman的foxtral脚手架',
+30 silly publish   homepage: 'https://github.com/qzhongyou/generator-foxtral#readme',
+30 silly publish   author: { name: '玉面', email: '837300621@qq.com' },
+30 silly publish   files: [ 'generators' ],
+30 silly publish   main: 'generators/index.js',
+30 silly publish   keywords: [ 'generator-foxtral', 'yeoman-generator' ],
+30 silly publish   devDependencies:
+30 silly publish    { 'yeoman-test': '^1.7.0',
+30 silly publish      'yeoman-assert': '^3.1.0',
+30 silly publish      coveralls: '^2.13.1',
+30 silly publish      nsp: '^2.6.3',
+30 silly publish      eslint: '^4.1.0',
+30 silly publish      prettier: '^1.7.0',
+30 silly publish      husky: '^0.14.3',
+30 silly publish      'lint-staged': '^4.2.1',
+30 silly publish      'eslint-config-prettier': '^2.4.0',
+30 silly publish      'eslint-plugin-prettier': '^2.2.0',
+30 silly publish      'eslint-config-xo': '^0.18.2',
+30 silly publish      jest: '^21.0.0',
+30 silly publish      'jest-cli': '^21.0.0' },
+30 silly publish   dependencies:
+30 silly publish    { chalk: '^2.1.0',
+30 silly publish      lodash: '^4.17.4',
+30 silly publish      mkdirp: '^0.5.1',
+30 silly publish      'yeoman-generator': '^2.0.1',
+30 silly publish      yosay: '^2.0.1' },
+30 silly publish   jest: { testEnvironment: 'node' },
+30 silly publish   scripts:
+30 silly publish    { prepublish: 'nsp check',
+30 silly publish      pretest: 'eslint .',
+30 silly publish      precommit: 'lint-staged',
+30 silly publish      test: 'jest' },
+30 silly publish   'lint-staged':
+30 silly publish    { '*.js': [ 'eslint --fix', 'git add' ],
+30 silly publish      '*.json': [ 'prettier --write', 'git add' ] },
+30 silly publish   eslintConfig:
+30 silly publish    { extends: [ 'xo', 'prettier' ],
+30 silly publish      env: { jest: true, node: true },
+30 silly publish      rules: { 'prettier/prettier': [Array] },
+30 silly publish      plugins: [ 'prettier' ] },
+30 silly publish   repository:
+30 silly publish    { type: 'git',
+30 silly publish      url: 'git+https://github.com/qzhongyou/generator-foxtral.git' },
+30 silly publish   license: 'MIT',
+30 silly publish   readme: '# generator-foxtral [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]\n> 基于yeoman的foxtral脚手架\n\n## Installation\n\nFirst, install [Yeoman](http://yeoman.io) and generator-foxtral using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).\n\n```bash\nnpm install -g yo\nnpm install -g generator-foxtral\n```\n\nThen generate your new project:\n\n```bash\nyo foxtral\n```\nor\n```bash\nyo foxtral projectName\n```\n\n## Project Structure\n```\n.\n├── app/\n│   ├── lib/\n│   │   └── lib.js\n│   ├── router/\n│   │   └── index.js\n│   ├── webroot/\n│   │   ├──layout\n│   │   │   └──index.html\n│   │   ├── page/\n│   │   │   └── index.html\n│   │   └── widget/\n│   │       └── list \n│   │            ├── list.html\n│   │            └── list.less \n│   └── app.js  \n│         \n├── .editorconfig \n├── package.json\n├── README.md\n└── .gitignore\n\n```\n\n* lib/ - 插件,外部API资源目录\n* router/ - 服务器端路由配置目录\n* webroot/ - 模板文件目录\n* app.js - 启动文件\n\n\n## License\n\nMIT © [玉面](https://github.com/qzhongyou)\n\n\n[npm-image]: https://badge.fury.io/js/generator-foxtral.svg\n[npm-url]: https://npmjs.org/package/generator-foxtral\n[travis-image]: https://travis-ci.org/qzhongyou/generator-foxtral.svg?branch=master\n[travis-url]: https://travis-ci.org/qzhongyou/generator-foxtral\n[daviddm-image]: https://david-dm.org/qzhongyou/generator-foxtral.svg?theme=shields.io\n[daviddm-url]: https://david-dm.org/qzhongyou/generator-foxtral\n[coveralls-image]: https://coveralls.io/repos/qzhongyou/generator-foxtral/badge.svg\n[coveralls-url]: https://coveralls.io/r/qzhongyou/generator-foxtral\n',
+30 silly publish   readmeFilename: 'README.md',
+30 silly publish   gitHead: '5ed0b9e1432bbb8899a95dcff07acbce7579cd44',
+30 silly publish   bugs: { url: 'https://github.com/qzhongyou/generator-foxtral/issues' },
+30 silly publish   _id: 'generator-foxtral@0.0.1',
+30 silly publish   _shasum: 'bb08061b57925d687eb730b84a161cb539c11ebc',
+30 silly publish   _from: '.' }
+31 info lifecycle generator-foxtral@0.0.1~prepublishOnly: generator-foxtral@0.0.1
+32 silly lifecycle generator-foxtral@0.0.1~prepublishOnly: no script for prepublishOnly, continuing
+33 verbose getPublishConfig undefined
+34 silly mapToRegistry name generator-foxtral
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry data Result {
+37 silly mapToRegistry   raw: 'generator-foxtral',
+37 silly mapToRegistry   scope: null,
+37 silly mapToRegistry   escapedName: 'generator-foxtral',
+37 silly mapToRegistry   name: 'generator-foxtral',
+37 silly mapToRegistry   rawSpec: '',
+37 silly mapToRegistry   spec: 'latest',
+37 silly mapToRegistry   type: 'tag' }
+38 silly mapToRegistry uri https://registry.npmjs.org/generator-foxtral
+39 verbose publish registryBase https://registry.npmjs.org/
+40 silly publish uploading /Users/quezhongyou/.npm/generator-foxtral/0.0.1/package.tgz
+41 verbose request uri https://registry.npmjs.org/generator-foxtral
+42 verbose request sending authorization for write operation
+43 info attempt registry request try #1 at 10:59:48
+44 verbose request using bearer token for auth
+45 verbose request id 4e01dab91ec86cb3
+46 http request PUT https://registry.npmjs.org/generator-foxtral
+47 http 403 https://registry.npmjs.org/generator-foxtral
+48 verbose headers { 'content-type': 'application/json',
+48 verbose headers   'cache-control': 'max-age=300',
+48 verbose headers   'content-length': '91',
+48 verbose headers   'accept-ranges': 'bytes',
+48 verbose headers   date: 'Sun, 29 Oct 2017 02:59:51 GMT',
+48 verbose headers   via: '1.1 varnish',
+48 verbose headers   connection: 'keep-alive',
+48 verbose headers   'x-served-by': 'cache-nrt6123-NRT',
+48 verbose headers   'x-cache': 'MISS',
+48 verbose headers   'x-cache-hits': '0',
+48 verbose headers   'x-timer': 'S1509245991.104407,VS0,VE637',
+48 verbose headers   vary: 'Accept-Encoding, Accept' }
+49 verbose request invalidating /Users/quezhongyou/.npm/registry.npmjs.org/generator-foxtral on PUT
+50 error publish Failed PUT 403
+51 verbose stack Error: You cannot publish over the previously published version 0.0.1. : generator-foxtral
+51 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
+51 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
+51 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
+51 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+51 verbose stack     at emitTwo (events.js:125:13)
+51 verbose stack     at Request.emit (events.js:213:7)
+51 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+51 verbose stack     at emitOne (events.js:115:13)
+51 verbose stack     at Request.emit (events.js:210:7)
+51 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+52 verbose statusCode 403
+53 verbose pkgid generator-foxtral
+54 verbose cwd /Users/quezhongyou/generator/generator-foxtral
+55 error Darwin 16.0.0
+56 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+57 error node v8.2.1
+58 error npm  v4.1.2
+59 error code E403
+60 error You cannot publish over the previously published version 0.0.1. : generator-foxtral
+61 error If you need help, you may report this error at:
+61 error     <https://github.com/npm/npm/issues>
+62 verbose exit [ 1, true ]
