@@ -1,3 +1,8 @@
+/**
+ * @authors       qzhongyou
+ * @date          2017-10-29
+ */
+
 'use strict';
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
@@ -91,6 +96,7 @@ module.exports = class extends Generator {
     });
   }
 
+  //菜单
   prompting() {
     // Have Yeoman greet the user.
     this.log(
@@ -99,6 +105,7 @@ module.exports = class extends Generator {
     return this._askFor.bind(this)();
   }
 
+  //默认，只要不在这个列表里的函数都在这个位置执行
   defaults() {
     if (this.props.name !== path.basename(this.destinationRoot())) {
       this.log(`Your generator is ${chalk.green(this.props.projectName)} \n`);
@@ -108,6 +115,7 @@ module.exports = class extends Generator {
     }
   }
 
+  //创建模板文件
   writing() {
     var pkg = this.fs.readJSON(this.templatePath('package.json'), {});
 
@@ -150,6 +158,7 @@ module.exports = class extends Generator {
     );
   }
 
+  //装npm和bower
   install() {
     this.installDependencies({
       skipInstall: this.options['skip-install'],
@@ -157,6 +166,7 @@ module.exports = class extends Generator {
     });
   }
 
+  //end
   end() {
     this.log(
       yosay('Thanks for using generator\n' + chalk.green('generator successfully !'))
