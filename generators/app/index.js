@@ -98,7 +98,7 @@ module.exports = class extends Generator {
 
   defaults() {
     if (this.props.name !== path.basename(this.destinationRoot())) {
-      this.log(`Your generator is ${this.props.projectName} \n`);
+      this.log(`Your generator is ${chalk.green(this.props.projectName)} \n`);
 
       // 名称不同是修改目录创建文件夹
       this.destinationRoot(this.destinationPath(this.props.name));

@@ -15,17 +15,46 @@ Then generate your new project:
 ```bash
 yo foxtral
 ```
+or
+```bash
+yo foxtral projectName
+```
 
-## Getting To Know Yeoman
+## Project Structure
+```
+.
+├── app/
+│   ├── lib/
+│   │   └── lib.js
+│   ├── router/
+│   │   └── index.js
+│   ├── webroot/
+│   │   ├──layout
+│   │   │   └──index.html
+│   │   ├── page/
+│   │   │   └── index.html
+│   │   └── widget/
+│   │       └── list 
+│   │            ├── list.html
+│   │            └── list.less 
+│   └── app.js  
+│         
+├── .editorconfig 
+├── package.json
+├── README.md
+└── .gitignore
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+```
+
+* lib/ - 插件,外部API资源目录
+* router/ - 服务器端路由配置目录
+* webroot/ - 模板文件目录
+* app.js - 启动文件
+
 
 ## License
 
-MIT © [玉面]()
+MIT © [玉面](https://github.com/qzhongyou)
 
 
 [npm-image]: https://badge.fury.io/js/generator-foxtral.svg
