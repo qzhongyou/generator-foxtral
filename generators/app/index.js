@@ -11,7 +11,10 @@ module.exports = class extends Generator {
     super(args, options);
 
     // 项目名称
-    this.argument('name', { type: String, required: false });
+    this.argument('name', {
+      type: String,
+      required: false
+    });
 
     // 项目名称
     this.option('name', {
@@ -24,7 +27,7 @@ module.exports = class extends Generator {
   // 初始化
   initializing() {
     this.props = {
-      root: this.options.projectRoot
+      name: this.name || this.options.name
     };
   }
 
@@ -148,7 +151,10 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies({ skipInstall: this.options['skip-install'], bower: false });
+    this.installDependencies({
+      skipInstall: this.options['skip-install'],
+      bower: false
+    });
   }
 
   end() {

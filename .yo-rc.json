@@ -5,5 +5,12 @@
       "authorEmail": "837300621@qq.com",
       "authorUrl": ""
     }
+  },
+  "generator-foxtral": {
+    "promptValues": {
+      "authorName": "阙中友",
+      "authorEmail": "quezhongyou@zhubajie.com",
+      "authorUrl": ""
+    }
   }
 }
